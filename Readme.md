@@ -1,5 +1,22 @@
 # Websocket binary test
 
+## Up and running with the repository
+
+```bash
+# Cloning repo and installing dependencies
+# Note that this project assumes you have nodejs installed
+git clone git@github.com:chris-schmitz/websocket-binary-test.git
+cd websocket-binary-test
+npm install
+
+# You can run the repository directly from node via:
+npm start
+```
+
+Also, if you're using VSCode, I've included the [.vscode/launch.json](.vscode/launch.json) file for the built in step debugger, so you can launch the server from the debugger control panel and use breakpoints to catch the message.
+
+![launching from vscode](./readme_attachments/launch_from_vscode.png)
+
 ## The problem
 
 I've been running into issues transmitting binary information via websockets. Every time I sent a number up to my websocket server from a test client that should have been in binary form I would receive a buffer of binary, but it would be the UTF encoding of the number character, not the number itself.
